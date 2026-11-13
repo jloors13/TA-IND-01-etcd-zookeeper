@@ -1,10 +1,12 @@
 
 \documentclass[12pt,a4paper]{article}
 
-% Configuración del documento
+% Codificación e idioma
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
+
+% Formato del documento
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{graphicx}
@@ -14,7 +16,16 @@
 \usepackage{csquotes}
 \usepackage{hyperref}
 
-% Márgenes y espaciado
+% Bibliografía IEEE con Biber
+\usepackage[
+    backend=biber,
+    style=ieee,
+    sorting=none
+]{biblatex}
+
+\addbibresource{referencias.bib}
+
+% Márgenes
 \geometry{
     left=2.5cm,
     right=2.5cm,
@@ -24,7 +35,7 @@
 
 \onehalfspacing
 
-% Información del documento
+% Datos del informe
 \title{
     Análisis crítico de etcd y comparación
     con Apache ZooKeeper
@@ -44,5 +55,8 @@
 \section{Introducción}
 
 % Contenido pendiente de desarrollo.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
 
 \end{document}
